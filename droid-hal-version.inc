@@ -40,7 +40,7 @@ Source:  %{name}-%{version}.tar.gz
 Requires: patterns-sailfish-device-configuration-%{rpm_device}
 
 # Generic dependencies
-BuildRequires: droid-hal
+#BuildRequires: droid-hal
 BuildRequires: droid-config
 BuildRequires: droid-config-sailfish
 %if 0%{!?native_build:1}
@@ -58,12 +58,12 @@ BuildRequires: droid-bin
 %endif
 
 # Kernel & Boot
-BuildRequires: droid-hal-kernel
+#BuildRequires: droid-hal-kernel
 %if 0%{?_obs_build_project:1}
-BuildRequires: droid-hal-img-boot
-BuildRequires: droid-hal-img-recovery
+#BuildRequires: droid-hal-img-boot
+#BuildRequires: droid-hal-img-recovery
 %endif
-BuildRequires: droid-config-preinit-plugins
+#BuildRequires: droid-config-preinit-plugins
 
 # Kernel modules
 %if 0%{?have_kernel_modules:1}
