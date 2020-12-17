@@ -49,7 +49,9 @@ BuildRequires: libhybris
 
 # LEDs for notifications
 %if 0%{?have_led:1}
+%if 0%{!?native_build:1}
 BuildRequires: mce-plugin-libhybris
+%endif
 %endif
 
 # If /system has been packaged to rpm package
